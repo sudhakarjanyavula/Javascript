@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <title>Conditional Statement (Switch Statement)</title>
+    </head>
+    <body>       
+        <script type="text/javascript">
+            var num1 = +prompt("Enter number 1")
+            var num2 = +prompt("Enter number 2")
+            var operation = prompt("Enter which operation to do (+/-/*/ /)")
+            switch(operation){
+                case '+':
+                    alert("Sum of two numbers is:" + (num1+num2))
+                    break;
+                case '-':
+                    alert("Difference of two numbers:" + (num1-num2))
+                    break;
+                case '*':
+                    alert("Multiple of two numbers:" + (num1 * num2))
+                    break;
+                case '/':
+                    alert("Division of two numbers" + (num1/num2))
+                    break;
+                default:
+                    alert("Eter valid opration")
+            }
+            
+        </script>
+    </body>
+</html>

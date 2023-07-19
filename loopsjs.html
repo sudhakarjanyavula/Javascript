@@ -1,0 +1,102 @@
+<!-- ===> Types of Loops
+        1. for loop
+        2.while loop
+        3. do-while loop
+        4.for-in loop
+        5.for-of loop
+
+1. for loop - it is used when we know the range
+
+    for(initialization; condition; increment) {
+        // Code to be executed
+    }
+
+2. while-loop - it is used for when we don't know the end value 
+
+    while(condition) {
+        // Code to be executed
+    }
+
+3. do-while - it is used when the loop is run one time and don't know about end value
+
+    do {
+        // Code to be executed
+    }
+    while(condition);
+
+4. for-in loop - it is used for find out the index value of the array elements(print value with index). it is used in arrays, strings, objects(in object findout key value)
+
+    for(x in variable){
+        // Code to be executed
+    } 
+
+5. for-off loop -  it is used for find out the place value of the array elements (just print value)
+
+    for(x of variable){
+        // Code to be executed
+    }--> 
+
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title></title>
+            <meta name="description" content="">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="">
+            <title>Loops in JS</title>
+        </head>
+        <body>       
+            <script type="text/javascript">
+                var sum = 0;
+                var n = +prompt("Enter a number")
+                for (let counter=10; counter<=n; counter++) {
+                    sum += counter
+                }
+                document.write("Sum of 10 to 20 numbers is : " + sum)
+                document.write("<br>")
+            </script>
+
+            <script>
+                var num = +prompt("Enter a number")
+                while(num!=0) {
+                    document.write("Entered number is:" + num + "<br>")
+                    num = +prompt("Enter a number")
+                }
+            </script>
+
+            <script>
+                var count = 5
+                do {
+                    num = +prompt("Enter a number");
+                    document.write("Entered number is:" + num + "<br>")
+                    count -=1
+                }
+                while (count > 0);
+            </script>
+
+            <script>
+                var fruits = ["Apple", "Banana", "Mango", "Kiwi"]
+                document.write(fruits + "<br>")
+                for(x in fruits){
+                    document.write(x + ":" + fruits[x]+ "<br>")
+                }
+
+                for(let i=0; i<=fruits.length; i++){
+                    document.write(i + ":" + fruits[i]+ "<br>")
+                }
+
+                for(element of fruits){
+                    document.write(element + "<br>")
+                }
+
+                var students = {'100': "abc", '101': "pqr", '102': "xyz"}
+
+                for (key in students){
+                    document.write(key + " : " + students[key] + "<br>")
+                }
+            </script>
+        </body>
+    </html>

@@ -1,0 +1,36 @@
+<html>
+    <head>Java Script Tutorial for arrays</head>
+    <body>
+        <p id="demo"></p>
+    </body>
+    <script>
+        let names = ["sudhakar", "bindu", "dhanvik", "akhi"];
+        document.getElementById("demo").innerHTML = names;
+
+        let sudhakar = names[0];
+        document.getElementById("demo").innerHTML = sudhakar;
+
+        let last = names[names.length-1]
+        document.getElementById("demo").innerHTML = last;
+
+        let append = names.pop()
+        document.getElementById("demo").innerHTML = append;
+
+        let family = ["son", "father", "sister"];
+        total = names.concat(family);
+        document.getElementById("demo").innerHTML = total;
+
+        let num1 = [2,4,6,8,10];
+        let num2 = num1.map(multiply);
+        function multiply(value){
+            return value * 2;
+        }
+        document.getElementById("demo").innerHTML = num2
+        
+        let num4 = num1.reduce(sum);
+        function sum(total, value){
+            return total+value
+        }
+        document.getElementById("demo").innerHTML = num4;
+    </script>
+</html>

@@ -1,0 +1,48 @@
+<html>
+    <h1> objects in Java script</h1>
+    <body>
+        <p id="demo"></p>
+    </body>
+
+    <!-- Object Literal type to create object-->
+     <script>
+        var employee = {
+            name: "sudhakar",
+            company: "Truequations"
+        }
+        document.getElementById("demo").innerHTML = employee.name + " "+ "works at" + " " + employee.company
+    </script>
+
+    <!-- Using new operator object constructer -->
+     <script>
+        var employee = new Object();
+        employee.name = "sudhakar",
+        employee.company = "Truequations"
+        document.getElementById("demo").innerHTML = employee.name + " "+ "works at" + " " + employee.company
+    </script>
+
+    <!-- Using new operator with Constructer function-->
+    <script>
+        function emp(name, company){
+            this.name = name;
+            this.company = company;
+        }
+        var employee = new emp("sudhakar", "Truequations");
+        employee.salary = 100000;
+        document.getElementById("demo").innerHTML = employee.name + " "+ "works at" + " " + employee.company + " "+ "with salary" +" "+ employee.salary 
+        console.log(employee.company, employee.name, employee.salary)
+        console.log(employee)
+    </script>
+
+    <script>
+        function milliseconds(x){
+            if (isNaN(x)){
+                return "Not a Number"
+            }
+            return x * 45;
+        }
+
+        console.log(milliseconds("100F"));
+        console.log(milliseconds("0.0314E+2"));
+    </script>
+</html>

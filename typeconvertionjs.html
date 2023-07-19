@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <title>Type Convertion</title>
+    </head>
+    <body>       
+        <script type="text/javascript">
+            var x = "6"
+            document.write(x + " : " +typeof(x))
+            document.write("<br>")
+            document.write(Number(x))
+            var b = parseInt("18sudhakar")
+            document.write("<br>")
+            document.write(b)
+            document.write("<br>")
+            document.write(typeof(b))
+            document.write("<br>")
+            var c = parseFloat("18.0")
+            document.write(c)
+            document.write("<br>")
+            document.write(typeof(c))
+            var z = 18
+            document.write(typeof(z))
+            z = String(undefined)
+            document.write("<br>")
+            document.write(z)
+            document.write("<br>")
+
+            var y = Boolean(18)
+            var a = Boolean(-18)
+            var zero = Boolean(zero)
+            document.write(y)
+            document.write("<br>")
+            document.write(a)
+            document.write("<br>")
+            document.write(zero)
+            document.write("<br>")
+
+            var s = Boolean("")
+            var st = Boolean("sudhakar")
+            var n = Boolean(null)
+            document.write(s)
+            document.write("<br>")
+            document.write(st)
+            document.write("<br>")
+            document.write(n)
+            document.write("<br>")
+            
+        </script>
+    </body>
+</html>
+
+
+
+<!-- ****** Notes ******
+
+===> Type convertions are 2 types
+
+    1. Implicit Type Conversion
+    2. Explicit Type Convertion
+
+    * Implicit type convertion depends upon the operations and operends
+    * In Boolean form true=1 and false=0 and null = 0
+    * Explicit type convertion is applicable only  NUmber,String, Boolean to convert one form to another form
+    * Examples of Explicit convertion are parseInt parseFloat String etc
+    * In Boolean null and empty string("") treated as False other than that all are True like number string with value etc -->
