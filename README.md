@@ -1,5 +1,5 @@
 # Javascript
 
-git token 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
+git token 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
 
 123

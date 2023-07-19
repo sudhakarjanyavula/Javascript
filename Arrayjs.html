@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <title>Arrays</title>
+    </head>
+    <body>       
+        <script type="text/javascript">
+            var movies = ["Baby", "RRR", "Bro", 18, true]
+            document.write(movies)
+            document.write("<br>")
+
+            movies[100] = "Billa"
+            document.write(movies)
+            document.write("<br>")
+
+            var mov = new Array("RRR", "Baby", "Bro")
+            document.write(mov)
+
+            console.log(mov[0])
+            console.log(movies.length)
+
+            movies.push("Don")
+            console.log(movies)
+            
+            var name = movies.pop()
+            console.log(name)
+            console.log(movies)
+
+            movies.unshift("PK")
+            console.log(movies)
+
+            
+            console.log(movies.indexOf("RRR"))
+
+            console.log(movies.slice(0,3))
+        </script>
+    </body>
+</html>
+
+<!-- ***** Notes *****
+
+===> Array methods
+1. push 
+2. pop
+3. unshift
+4. shift
+5. Indexof
+6. slice -->
