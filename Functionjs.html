@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <title>Functions In Java Script</title>
+    </head>
+    <body>       
+        <script type="text/javascript">
+            function sum(num1, num2){
+                var result = num1 + num2
+                return result;
+            }
+            console.log(sum(18,23))
+            document.write("Functions in JS" + "<br>")
+            document.write(sum(18,23))
+            document.write("<br>")
+        </script>
+
+        <script>
+            function add(a,b){
+                var total = a + b
+                document.write("Total of two numbers is : " + total)
+                return total;
+            }
+            add(16,9)
+            document.write("<br>")
+            console.log(add(16,10))
+        </script>
+
+        <script>
+            // ==> what is function expression :- To Assign a function to a varialbe
+            var z = function(a,b){
+                var temp = a + b
+                document.write("Total of two values is : " + temp)
+                return temp;
+            }
+            document.write("<br>")
+            z(10,10)
+            document.write("<br>")
+        </script>
+
+        <script>
+            //  IIEF(Immediatly Invoked Expression Function) (its is one time use only)
+            (
+                function(x,y){
+                    var demo = x + y
+                    document.write("Total of two var is: " + demo + "<br>")
+                    document.write(demo + "<br>")
+                }
+            )(20,30)
+        </script>
+            
+        <script>
+            // <!-- Arrow Fucntion -->
+            arrow = (p,q) => {
+                var result = p + q
+                document.write("The result is :" + result + "<br>")
+                // return result;
+            }
+            arrow(100,8)
+            document.write("<br>")
+
+            var arr = (a,b) => a * b  // forms in arrow fuctions
+            document.write(arr(5,5))
+            document.write("<br>")
+
+            var cube = num1 => num1 * num1 * num1
+            document.write(cube(3))
+            document.write("<br>")
+
+            var greet = () => {                        //if No parameters are given
+                document.write("sudhakar" + "<br>")
+                document.write("siddu" + "<br>")
+                return 18
+        }
+            var res = greet()
+            document.write(res)
+            
+            
+        </script>
+    </body>
+</html>
+
+
+<!-- 
+******Notes******
+
+==> Function are used for code reusability purpose
+
+    function functionName(parameter1, parameter2,..... parametern){
+        body
+        return value;
+    }
+
+==> Anonymous fuction: In this function no name is given to that fucntion, but we need to assign that function to one variable
+
+    var variable_name = function(parameter1, parameter2,..... parametern){
+        body
+        return value;
+    }
+
+==> IIEF(Immediatly Invoked Expression Function) :- when we want to execute a function immediatly where they created, IIEF used
+
+    (function definition)(parameter1, parameter2,..... parametern);
+
+==> Arrow Fucntion :- 
+
+    var variable = (parameter1, parameter2,..... parametern) => {
+        body
+        return value;
+    }
+
+    ===> Forms in Arrow functions :-
+    1. var product = (num1,num2) => num1 * num2
+
+    2. if only one parameter 
+        var cube = num1 => num1 * num1 * num1
+    
+    3. if No parameters
+        var greet = () => console.log("sudhakar")   (or)
+        var greet = _=> console.log("Dhanvik")
+-->

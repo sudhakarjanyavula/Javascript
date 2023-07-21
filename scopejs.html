@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <title>Scope in Java Script</title>
+    </head>
+    <body>       
+        <script type="text/javascript">
+            function test(){
+                let a = 10
+                // var b = 200
+                const c = 30
+                console.log(b)
+                console.log(x)
+            }
+            var b = 20                 // if we give same variable inside and outside of the function with same name, the console first check inside the function and print that variavle, if incase inside the varialbe is not defined then its print outside function variable 
+            {
+                var x = 100
+            }
+            test()
+            console.log(x)
+
+            // console.log(a)        // we can't use local varialbe in globally (when ever variable assign in side the block its a local function)
+
+            let a = 10
+            var b = 20
+            const c = 30            // we can use the Global variable in any where in the program and in side the function also
+
+            {
+                console.log(a)
+                console.log(b)
+                console.log(c)
+            }
+
+            //  ==> Block level scope is nothing but when we assign a variable with let in the block, then we can't access that variable outside the block only by using Var keywork its possible this is know as Blocklevel scope 
+        </script>
+    </body>
+</html>
