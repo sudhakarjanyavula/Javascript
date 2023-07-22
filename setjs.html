@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <title>Sets in Java Script</title>
+    </head>
+    <body> 
+        <script>
+            // set: Collection of unique values is called set
+            // array: Collection of values
+
+            let s1 = new Set()
+            console.log(s1)
+            console.log(typeof(s1))
+
+            s1.add(10)
+            s1.add(20)
+            s1.add(10)
+            s1.add(50).add(60).add(70) .add(80)
+            console.log(s1)
+        </script>   
+        
+        <script>
+            arr = [1,2,3,4,2,3,6,7]
+            console.log(arr)
+
+            let s2 = new Set(arr)
+            console.log(s2)
+
+            let z = "sudhakar"
+
+            let s3 = new Set(z)
+            console.log(s3)
+            status = s3.delete('d')   //if d is not their in the set its through error. otherwise its deleted
+            console.log(s3)
+            console.log(status)
+
+            let check = s3.has('z')
+            console.log(check)
+
+            let demo = s3.has('s')
+            console.log(demo)
+
+            console.log(s3.size)
+            console.log(s3)
+            s3.clear()
+            console.log(s3)
+
+        </script>
+
+        <script>
+            let j = "sudhakar"
+            let s4 = new Set(j)
+            console.log(s4)
+            for(ele of s4){
+                console.log(ele)
+            }
+
+            s4.forEach((ele, index, arr) =>{
+                console.log(ele, index, arr)
+                // console.log(index)
+            })
+
+            console.log(s4.entries())
+
+            let itr = s4.entries()
+            console.log(itr.next())
+            console.log(itr.next())
+        </script>
+    </body>
+</html>
