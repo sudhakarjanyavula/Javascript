@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <title>Foreach in JS</title>
+    </head>
+    <body>       
+        <script type="text/javascript">
+            var salaries = [50000,40000,45000]
+            console.log(salaries)
+            salaries.forEach((salary,index) =>{
+               let incrememt = salary/10
+               salaries[index] = salary + incrememt
+            })
+            console.log(salaries)
+        </script>
+
+        <script>
+            var salaries = [50000,40000,45000]
+            console.log(salaries)
+
+            var test = (salary,index) =>{
+                let increment = salary/10;
+                salaries[index] = salary + increment;
+            }
+
+            salaries.forEach(test)
+            console.log(salaries)
+        </script>
+    </body>
+</html>
+
+<!-- *****Notes******
+
+For each element present inside array the specified function will be executed
+
+    arr.forEach(function functionName(currentItem,index,arr){
+       //  code here
+    });
+
+    currentItem : Required
+    index & arr : optional
+
+    arr.forEach(functionName);
+
+
+    arr.forEach(test);
+    
+    
+    function test(item,index,arr){
+        // code
+    }-->
