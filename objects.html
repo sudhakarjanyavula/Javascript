@@ -3,6 +3,8 @@
     <body>
         <p id="demo"></p>
     </body>
+    <!-- Object : Collection of properties and methods -->
+
 
     <!-- Object Literal type to create object-->
      <script>
@@ -10,14 +12,23 @@
             name: "sudhakar",
             company: "Truequations"
         }
+        console.log(Object.entries(employee))
+        console.log(Object.keys(employee))
+        console.log(Object.values(employee))
+        console.log(employee)
+        console.log(employee.name)
+        console.log(employee["name"])
+        employee.salary = 100000
+        console.log(employee)
         document.getElementById("demo").innerHTML = employee.name + " "+ "works at" + " " + employee.company
     </script>
 
     <!-- Using new operator object constructer -->
      <script>
         var employee = new Object();
-        employee.name = "sudhakar",
+        employee.name = "sudhakar janyavula",
         employee.company = "Truequations"
+        console.log(employee)
         document.getElementById("demo").innerHTML = employee.name + " "+ "works at" + " " + employee.company
     </script>
 
@@ -26,8 +37,12 @@
         function emp(name, company){
             this.name = name;
             this.company = company;
+            this.login = function(){
+                console.log(`Hello ${this.name} you have won 100cr`)
+            }
         }
         var employee = new emp("sudhakar", "Truequations");
+        console.log(employee)
         employee.salary = 100000;
         document.getElementById("demo").innerHTML = employee.name + " "+ "works at" + " " + employee.company + " "+ "with salary" +" "+ employee.salary 
         console.log(employee.company, employee.name, employee.salary)
@@ -35,6 +50,49 @@
     </script>
 
     <script>
+        function user(name, place, gender){    //constructor fucntion
+            this.name = name
+            this.place = place
+            this.gender = gender
+            this.login = function(){
+                console.log(`Hello ${this.name} you have won 100cr`)
+            }
+        }
+        var data = new user("sudhakar", "vijayawada", "Male")
+        var data1 = new user("Bindu", "vijayawada", "Female")
+        var data2 = new user("Dhanvik virrat", "vijayawada", "Male")
+        data2.mobile = "9999999999"
+        console.log(data)
+        console.log(data1)
+        console.log(data2)
+        console.log(data.name)
+        for(key in data){
+            console.log(key, ":", data[key])
+        }
+    </script>
+
+    <!-- Object,create Method -->
+    <script>
+        var data3 = Object.create(data)
+        data3.name = "Akhilaksha Naidu"
+        data3.place = "Vijayawada"
+        data3.gender = "Female"
+        data3.mobile = "9999999999"
+        console.log(data3)
+        data.login()
+        data1.login()
+        data2.login()
+        data3.login()
+        employee.login()
+        console.log(Object.keys(data3))       //TO get the all key in arrays form
+        console.log(Object.keys(data))
+        console.log(Object.entries(data2))    // TO get the all keys and values of object into array form
+        console.log(Object.entries(data1))
+        console.log(Object.values(data  ))  // TO get the all values in array form
+    </script>
+    
+
+    <!-- <script>
         function milliseconds(x){
             if (isNaN(x)){
                 return "Not a Number"
@@ -44,5 +102,5 @@
 
         console.log(milliseconds("100F"));
         console.log(milliseconds("0.0314E+2"));
-    </script>
+    </script> -->
 </html>
