@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <title>Console Methods in JS</title>
+    </head>
+    <body>       
+        <script type="text/javascript">
+            a = [1,2,3,4,5]
+            var obj = {
+                name: "sudhakar",
+                place: "vijayawada",
+                gender: "Male",
+                gmail: "sudhakar@gmail.com"
+            }
+            console.log("Hello Sudhakar")
+            console.info("sudhakar")
+            console.warn("Warn sudhakar")
+            console.error("Error")
+            console.table(a)
+            console.table(obj)
+            // console.clear()  
+            console.assert(10>15, "condition False") // when ever the condition false then only asserts didplay msg
+            console.count("sudhakar")
+            console.count("siddu")
+            // console.countReset("siddu")
+
+            let x = +prompt(`Enter a number`)
+            console.time("Loop time : ")
+            console.timeLog("Loop time : ")
+            while(x !=10){
+                x = +prompt(`Enter a 10`)
+                console.count("called")
+                console.timeLog("Loop time : ")
+            }
+            console.timeEnd("Loop time : ")
+
+            console.group("Ramu")
+            console.log(`Adilakshmi`)
+            console.log(`sudhakar`)
+            console.log(`Anjana Devi`)
+            console.groupEnd()
+
+            console.group("sudhakar")
+            console.log(`Bindu`)
+            console.log(`Dhanvik virrat`)
+            console.log(`Akhilaksha Naidu`)
+            console.groupEnd()
+            // console.groupCollapsed("sudhakar")
+        </script>
