@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <title>DOM in JS</title>
+    </head>
+    <body>    
+        <div id="first">
+            <h2>This is heading 1</h2>
+            <p>This is paragraph</p>
+        </div> 
+
+        <div id="first">
+            <h2>This is heading b</h2>
+            <p>This is paragraph</p>
+        </div> 
+
+        <div class="demo1">
+            <h2>This is heading 2</h2>
+            <p>This is paragraph</p>
+        </div> 
+        <div class="demo1">
+            <h2>This is heading 3</h2>
+            <p>This is paragraph</p>
+        </div> 
+        <a href="https://www.amazon.in/">Amazon</a>
+         
+        <script type="text/javascript">
+           let x = document.getElementById("first")
+           let b= document.getElementById("first")    // But not consider this ID bcz id is already used in x variable
+           let y = document.getElementsByClassName("demo1")
+           let a = document.getElementsByClassName("demo1")
+           let z = document.getElementsByTagName("h2")
+        //    let q = document.querySelector(".demo1")
+           let q = document.querySelector("#first")
+           let h = document.querySelector("h2")
+           let qa = document.querySelectorAll("#first")
+           console.log(x)
+           console.log(y)
+           console.log(z)
+           console.log(a)
+        //    console.log(b)
+           console.log(q)
+           console.log(h)
+           console.log(qa)
+        </script>
+
+        <script>
+            console.log(document)
+            console.log(document.body)
+            console.log(document.title)
+            console.log(document.links)
+            console.log(document.head)
+            console.log(document.scripts)
+        </script>
+    </body>
+</html>
+
+<!-- ******Notes******
+
+==> DOM(Document Object Model) :- By unsing Html DOM JS can access, change and remove any elements of HTML document and also create new element at any position
+
+==> Document Object has 1. Properties 2. Methods
+
+==> By this document object properties and methods we can 
+        1. Select HTML element
+        2. Modify HTML element
+        3. Remove/delete HTML element
+        4. Create HTML element
+        5. Add/Remove/Change style to HTML element 
+    
+==> Methods to select HTML Elements: 
+    1. document.getElementById("idName")
+            Return element with the specified id   note: id is specified only once but class give any number of time
+    2. document.getElementByClassName("classname")
+            Return list of all elements belongs to the specified class
+    3. document.getElementByTagName("tagName")
+            Return list of all elements with the specified tag
+    4. document.querySelector(".class/#id/tagname")
+            Return the first object matching CSS style selector
+    5. document.querySelectorAll(".class/#id/tagname")     (Nodelist)
+            Return the all object matching CSS style selector
+        
+==> Properties tp select HTML Element:
+    1. document.body
+    2. document.head
+    3. document.title
+    4. document.anchors
+    5. document.forms
+    6. documentimage
+    7. document.script-->
