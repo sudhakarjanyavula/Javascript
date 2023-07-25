@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>DOM Manuplation in JS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <div id="first">
+            <p>
+                This is the first paragraph in div1
+            </p>
+
+            <p id="childremove">
+                This is the childRemove element
+            </p> 
+        </div>
+
+        <div id="second">
+            <p>
+                This is the first paragraph in div2
+            </p>
+
+            <p id="last">
+                This is the last paragraph in div2
+            </p> 
+        </div>
+        
+        <script type="text/javascript">
+            var n = document.createElement("p")
+            // n.innerText = "<div>This is third paragraph in division2<div>"
+            // n.innerHTML = "<div>This is third paragraph in division2 innerHTML<div>"
+            console.log(n)
+            var parent = document.getElementById("second")
+            console.log(parent)
+            parent.appendChild(n)                 //It will add the element at the last of the html div block
+
+            // console.log(parent.innerText)
+            // console.log(parent.innerHTML)
+        </script>
+
+        <script>
+            var s = document.createElement("div")
+            s.innerHTML = "Hello sudhakar"
+            console.log(n)
+            var par = document.getElementById("first")
+            par.appendChild(s)
+            console.log(par) 
+
+            var y = document.getElementById("childremove")
+            par.removeChild(y)
+        </script>
+
+        <script type="text/javascript">
+            var m = document.createElement("h1")
+            m.innerText = "This is Insert Before method"
+            console.log(m)
+            var parent = document.getElementById("second")
+            var last = document.getElementById("last")
+            parent.insertBefore(m, last)
+            // last.remove()
+
+            console.log(last)
+            last.replaceChildren(m)
+            last.replaceWith(m)
+        </script>
+    </body>
+</html>

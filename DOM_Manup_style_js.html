@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>DOM Manuplation Styles in JS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            #special{
+                color: black;
+            }
+            .one{
+                background-color: blueviolet;
+            }
+            .two{
+                border: 5px solid green;
+            }
+            .three{
+                border: 10px solid red;
+            }
+            .four{
+                background-color: blue;
+                padding: 30px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="special" class="one">
+            This is Division 1
+        </div>
+        <img src="siddu.jpeg" alt="" id="img1">
+
+        <input type="text" id="fname">
+
+        <div id="demo" class="two">
+            sudhakar
+        </div>
+
+
+        <script>
+            var x = document.getElementById("special")
+            x.style.color = "red"
+            x.style.border = "black 3px solid"
+            // console.log(x.style)
+
+            console.log(x.getAttribute("id"))
+            console.log(x.getAttribute('class'))
+
+
+            var img = document.getElementById("img1")
+            img.style.width = "500px"
+            img.style.height = "500px"
+            console.log(img.getAttribute('src'))
+
+            img.setAttribute('src', 'Dhanvik.jpg')
+            console.log(img.getAttribute('src'))
+
+            var input = document.getElementById('fname')
+
+            console.log(input.getAttribute('value'))
+            input.setAttribute('value', 'Dhanvik Virat')
+            console.log(input.getAttribute('value'))
+
+            var y = document.getElementById('demo')
+            y.setAttribute('class', 'three')
+            y.classList.add('three')
+            y.classList.add('four')
+            y.classList.remove('three')
+            console.log(y.classList)
+        </script>
+    </body>
+</html>
