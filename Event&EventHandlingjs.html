@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <div id="special">
+            <input id="sp" type="text"/> <br><br>
+            <!-- <button id="bt"> Change Background </button> -->
+            <button id="bt" onclick="change()"> Change Background </button>
+       </div>
+
+        <script>
+            // let btn = document.getElementById('bt')
+            // // btn.onclick = change;
+            // // function change(){
+            // //     document.body.style.backgroundColor ="red"
+            // // }
+            // btn.addEventListener('click', change)
+            // function change(evnt){
+            //     console.log(evnt)
+            //     document.body.style.backgroundColor ="red"
+            //     btn.style.backgroundColor ="green"
+            // }
+
+            // let btn1 = document.getElementById("sp")
+            // btn1.addEventListener('keyup', change1)
+            // function change1(evnt){
+            //     console.log(evnt)
+            //     if(evnt.key == 'a'){
+            //         alert("a not allowed")
+            //     }
+            //     btn1.style.backgroundColor = "blue"
+            // }
+
+            function change(){
+                var letters = '0123456789ABCDEF';
+                var color = '#';
+                for (var i = 0; i < 6; i++){
+                    var r = Math.floor(Math.random()*16);
+                    color = color + letters[r]
+                }
+                document.body.style.backgroundColor = color
+            }
+        </script>
+    </body>
+</html>
+
+<!-- *****Notes*****
+==> Event is nothing but an Action
+==> Types of Events
+    1. Browser specified events -> scrollup/down resize Browser
+    2.DOM/web page specified events -> Click,hover, focus etc
+        1. Mouse events
+        2. Keyboard events
+        3  Focus events 
+        4. Form events (submit, reset, change)
+    
+==> Types of Event Handlers
+        1. Inline event Handler(using event attributes in HTML)
+                Ex: <button onclink = "sudhakar"> 
+
+        2. Using event properties in JavaScript
+                Ex: let button = document.getElemenyById(b1)
+                button.onclick = function name/anonymous function
+        3.Using  addEventListener() method in Java Script
+                Ex: let btn = document.getElementById('bt')
+                btn.addEventListener("eventname",function name/ anonymous function)-->
