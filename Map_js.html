@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Map() in JS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+            <!-- The main difference between forEach and Map is forEach not create new array but Map create new array at the end of the code execution -->
+       
+        <script>
+            var birthyear = [1990, 1993, 1995, 1996, 2000]
+             var ages = birthyear.map(agefind)
+             function agefind(ele,index,arr){
+                let age = 2023-ele
+                return age;   //if not return anything its gives undefined
+            }
+            console.table(birthyear)
+            console.table(ages)
+        </script>
+    </body>
+</html>
