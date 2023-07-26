@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Reduce Methos in JS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <script>
+            // arrname.reduce(function, accumulator default value)
+
+            // function can take 4 arrguments
+
+            //function(acc,ele,index,array)
+
+            //arr.reduce(function(acc,ele,index,arr),8)
+
+            //This method returns a single value
+
+            var arr = [2,5,18,23,11,29,3,14,100]
+            var res = arr.reduce(function(acc,ele){
+                if (acc > ele){
+                    return acc
+                }
+                else{
+                    return ele
+                }
+            }, arr[0])
+            //function(acc,ele,index,arr){} ----> It is the first arguments of the reduce method
+            console.log(res)
+        </script>
+
+        <script>
+            var arr = [1,2,3,4,5,6,7,8,9,10]
+            var res = arr.reduce(function(acc,ele){
+                return acc+ele
+            },0)
+            console.log(`The sum of first Natural numbers is: ${res}`)
+        </script>
+
+        <script>
+            var arr = [1,2,3,4,5,6,7,8,9,10]
+            var res = arr.reduce((acc,ele) => {return acc * ele},1)          //Using arrow fuction
+            console.log(`The Product of first Natural numbers is: ${res}`)
+        </script>
+    </body>
+</html>
