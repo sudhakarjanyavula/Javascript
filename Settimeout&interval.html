@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>settimeout and setInterval functions in JS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>This is settimeout function </h1>
+        <script>
+            var counter = 1
+            // setTimeout(function(name){
+            //     alert("This is settimeout function")
+            // }, 5000,)
+            // console.log("sudhakar")
+
+            // var x = setTimeout(demo, 5000, "siddu")
+            var x = setInterval(demo, 5000, "siddu")
+            console.log("sudhakar")
+            console.log(x)
+            // clearInterval(x)
+            function demo(name){
+                alert("This is settimeout function()" + " " + name + " " + counter)
+                counter++
+                if(counter >= 5){
+                    clearInterval(x)
+                }
+                console.log(counter)
+            }
+        </script>
+    </body>
+</html>
