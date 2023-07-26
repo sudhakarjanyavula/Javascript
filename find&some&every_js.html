@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Find() & Some() & Every() Methods in JS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+       
+        <script>
+            //Find method is the callback function
+            //It returns first element of array for which callback fuction returns true
+
+            let places = ['vatican City','Vijayawada', 'Guntur', 'Vizag', 'Hyd']
+            var res = places.find((ele) => {return ele.startsWith("V")})
+            console.log(res)
+        </script>
+
+        <script>
+            let places1 = ['Vatican City','Vijayawada', 'Guntur', 'Vizag', 'Hyd']
+            var res = places1.filter((ele) => {return ele.startsWith("V")})
+            console.log(res)
+        </script>
+
+        <script>
+            let places2 = ['Vatican City','Vijayawada', 'Guntur', 'Vizag', 'Hyd']
+            var res = places2.some((ele) => {return ele.startsWith("V")})
+            console.log(res)
+        </script>
+
+        <script>
+            var marks = [68,84,95,88,82,90]
+            var res = marks.every((mark) => {return mark > 35})
+            console.log(res)
+        </script>
+    </body>
+</html>
+
