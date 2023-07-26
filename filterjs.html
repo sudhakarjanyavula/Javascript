@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Filters in JS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>This is the filter() function in JS</h1>
+        
+        <script>
+            var nums = [3,5,18,11,23,29, 30, 2, 6]
+            var even = nums.filter(function(ele, index, array){
+                return ele % 2 == 0
+            })
+            console.log(even)
+        </script>
+    </body>
+</html>
