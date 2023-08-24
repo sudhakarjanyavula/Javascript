@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Call back fucntion in JS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Call back function in JS</h1>
+        <script>
+
+            // Call back function is a fucntion, it is passed as an argument to the another fucntion
+
+            function first(second){
+                second()
+                console.log("This is first funtion")
+            }
+
+            function second(){
+                console.log("This is second function")
+            }
+            first(second)
+          
+
+            function add(a,b){
+                console.log(a+b)
+            }
+
+            function product(a,b){
+                console.log(a*b)
+            }
+
+            function calculator(val1, val2, operation){
+                operation(val1,val2)
+            }
+
+            calculator(4,5,add)
+            calculator(4,5,product)
+
+            arr = [1,2,3,4,5]
+            let res = arr.map(function(ele,index,array){
+                return(ele*ele)
+            })
+            console.log(res)
+        </script> 
+    </body>
+</html>
