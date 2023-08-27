@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Call back fucntion in JS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Closure And Scope in JS</h1>
+        <input type="button" onclick="updatecounter()" value="click">
+        <p id="counter">Clicked : 0</p>
+        <script>
+            function updatecountersequre(){
+                let count = 0
+                function inner(){
+                    count++
+                    var p = document.getElementById("counter")
+                    p.innerHTML = `Clicked : ${count}`
+                }
+                return inner
+            }
+            let updatecounter = updatecountersequre()
+            console.log(updatecounter)
+
+            //Accessing variables of a fucntion even its execution completes or out of its scope
+
+            // function outer(num1){
+            //     var x = 10
+            //     function inner(num2){
+            //         var y = 20
+            //         console.log(x)
+            //         console.log(y)
+            //         console.log(num1+num2+x+y)
+            //     }
+            //     return inner
+            // }
+            // var res = outer(100)
+            // res(200)
+            // console.log(res)
+        </script> 
+    </body>
+</html>
