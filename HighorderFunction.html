@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Call back fucntion in JS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Higher Order function in JS</h1>
+        <script>
+            //Higher Order fucntion is a function that recieves other function an argument or return another fucntion OR Both
+            let arr = [1,2,3,4,5]
+            function square(num){
+                // squares = []
+                // for (ele of arr){
+                //     let res = ele*ele
+                //     squares.push(res)
+                // }
+                return num*num
+            }
+            function cube(num){
+                //cubes = []
+                // for (ele of arr){
+                //     let res = ele*ele*ele
+                //     cubes.push(res)
+                // }
+                return num*num*num
+            }
+            // let x = square(arr)
+            // console.log(x)
+            // let y = cube(arr)
+            // console.log(y)
+
+            function increment(num){
+                return num+1
+            }
+
+            function anyoperation(arr, operation){
+                let result = []
+                for(ele of arr){
+                   result.push(operation(ele)) 
+                }
+                return result
+            }
+
+            let x = anyoperation(arr,square)
+            console.log(x)
+
+            let y = anyoperation(arr,cube)
+            console.log(y)
+
+            let z = anyoperation(arr, increment)
+            console.log(z)
+
+
+            function first(){
+                // return second
+                return ()=>{console.log("This is Arrow function")}
+            }
+
+            function second(){
+                console.log("This is second function")
+            }
+
+            let res = first()
+            res()
+            first()()
+            console.log(first())
+        </script> 
+    </body>
+</html>
