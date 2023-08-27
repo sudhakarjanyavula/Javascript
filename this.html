@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Call back fucntion in JS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>This Keyword in JS</h1>
+        <!-- <input type="button" onclick="console.log(this)" value="click"> <br><br>  Note: if this keyword used in event handler its represents the complete html element (Example click the button and check the console) <br><br>
+        <input type="button" onclick="this.style.background = 'red', this.style.color = 'white'" value="click me"> -->
+
+        <input type="button" value="click" id="btn">
+        <script>
+            var a = 10                            //if this keyword is used in globally or inside the function its represents the window object
+            console.log(this)
+            function add(){
+                // console.log(this.a)
+                // console.log(window.a)
+            }
+            add()
+            // console.log(window.a)
+            // console.log(this.a)
+            // console.log(a)
+
+            var aa = {                        //if the this keyword is used in in side the object its represents the object
+                name : "Dhanvik",
+                getName: function(){
+                    console.log(this)
+                }
+            }
+            aa.getName()
+            // console.log(aa)
+            // console.log(window.aa)
+            // console.log(this.aa)
+
+            document.getElementById("btn").onclick = function(){   //if this keyword used in event handler its represents the complete html element
+                console.log(this)
+            }
+        </script> 
+
+        <script>
+            // "use strict"
+            function test(){
+                // "use strict"
+                console.log(this)
+            }
+            test()
+        </script>
+    </body>
+</html>
