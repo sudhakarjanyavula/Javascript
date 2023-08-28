@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>optional Chaining in JS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <p id="one">Hello Dhanvik Virrat</p>
+        <p id="wrong">Hello Sudhakar</p>
+        <h1>Optional Chaining in JS</h1>
+        <script>
+
+            let employee = {
+                id: 1,
+                email: "dhanvik@email.com",
+                personalInfo: {
+                    name: "Dhanvik Virrat",
+                    phone_number: 9999999999,
+                    address: {
+                        do_no: 74-7-13/3,
+                        street: "JD Nagar",
+                        place: "Patamata",
+                        City: "Vijayawada",
+                        State: "AP",
+                        pin_code: 520010
+                    }
+                }
+            } 
+            console.log(employee.personalInfo?.address?.village)
+            console.log(employee.personalInfo?.address.City)
+
+            let q = document.getElementById("wrongg")?.innerHTML
+            console.log(q)
+
+            let p = document.getElementById("one").innerHTML
+            console.log(p)
+        </script>
+    </body>
+</html>
