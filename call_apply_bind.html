@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Call back fucntion in JS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Call Apply Bind in JS</h1>
+        <script>
+            var salary = 200000
+            function getsalary(a,b){
+                console.log(this.salary)
+                console.log(a,b)
+            }
+         
+            var myobj = {
+                salary: 100000,
+                getsalary: function(a,b){
+                    console.log(this.salary)
+                    console.log(a,b)
+                }
+            }
+            myobj.getsalary(18,23)
+
+            employee1 = {
+                salary: 300000
+            }
+
+            employee2 = {
+                salary: 500000
+            }
+
+            employee3 = {
+                salary: 900000
+            }
+
+            // Call method
+            getsalary.call(employee1, 12, 15)
+            myobj.getsalary.call(employee1, 12, 15)
+
+            // Apply method(you must pass the parameters in array form only, otherwise its throws error)
+            getsalary.apply(employee2, [12, 23])
+            myobj.getsalary.apply(employee2, [12, 23])
+
+            //Bind method (it takes only function form only)
+            var f1 = getsalary.bind(employee3, 23, 18)
+            f1()
+            var f2 = myobj.getsalary.bind(employee3)
+            f2( 23, 18)
+        </script>
+    </body>
+</html>
