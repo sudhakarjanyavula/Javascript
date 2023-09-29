@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>optional Chaining in JS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Date Operator in JS</h1>
+        <script>
+            function test(){
+                this.name = 'xyz'
+            }
+
+            let t1 = new test()
+
+            let d1 = new Date()
+            console.log(d1)
+
+            let d2 = new Date(20000)
+            console.log(d2)
+
+            let d3 = new Date(24*60*60*1000)
+            console.log(d3)
+
+            let d4 = new Date(-24*60*60*1000)
+            console.log(d4)
+
+
+            let d5 = new Date('2023-09-29')  //yyyy-mm-dd
+            console.log(d5)
+
+            let d6 = new Date('09-29-2023')  //mm-dd-yyyy
+            console.log(d6)
+
+            let d7 = new Date(2023,9,29,5,30,10)  //yyyy,mm,dd,hh,min,sec  [0-jan, 11-Dec]
+            console.log(d7)
+
+            let months = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"]
+
+            console.log(d2.getTime())
+            console.log(d5.getDate())
+            console.log(d5.getHours())
+            console.log(d5.getFullYear())
+            console.log(d5.getUTCDate())
+            console.log(d5.getTimezoneOffset())
+            console.log(d5.getMonth())
+            console.log(months[d5.getMonth()])
+
+            d5.setFullYear(2015)
+            console.log(d5.getFullYear())
+            console.log(d5)
+        </script>
+    </body>
+</html>
